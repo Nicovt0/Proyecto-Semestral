@@ -1,0 +1,37 @@
+.logo{
+    width: 35px;
+    border-radius: 100px;
+}
+.btn{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*Imganes y contenedores*/
+.img-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-principal{
+    width: 200px;
+    margin: 5px;
+}
+.sub-img-c{
+    display: flex;
+    justify-content: center;
+}
+.sub-img{
+    width: 50px;
+    margin: 5px;
+}
+/*Informacion del producto*/
+.informacion-p{
+    margin: 10px;
+}
+.producto-txt{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.precio{
+    padding-left: 10px;
+}

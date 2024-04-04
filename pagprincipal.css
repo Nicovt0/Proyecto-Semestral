@@ -3,6 +3,11 @@
     width: 35px;
     border-radius: 100px;
 }
+.btn{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
 /*Carousel*/
 .carousel-c{
     margin-bottom: 60%;
