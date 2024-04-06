@@ -1,0 +1,12 @@
+/*Encabezado*/
+.logo{
+    width: 35px;
+    border-radius: 100px;
+}
+.nav-link{
+    margin: 10px;
+    transition: transform 0.2s ease;
+}
+.nav-link:hover{
+    transform: scale(1.10);
+}

@@ -3,10 +3,14 @@
     width: 35px;
     border-radius: 100px;
 }
-.btn{
-    margin-left: 10px;
-    margin-right: 10px;
+.nav-link{
+    margin: 10px;
+    transition: transform 0.2s ease;
 }
+.nav-link:hover{
+    transform: scale(1.10);
+}
+/*Productos*/
 .titulos-txt{
     font-size: 35px;
 }
@@ -17,4 +21,11 @@
 }
 .card{
     margin: 10px;
+    transition: transform 0.2s ease;
+}
+.card p{
+    text-align: justify;
+}
+.card:hover{
+    transform: scale(1.01);
 }
