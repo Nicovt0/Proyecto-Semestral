@@ -1,18 +1,57 @@
+.fondo{
+    background-color:#212529;
+}
+/*Encabezado*/
+.navbar-name{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 30px;
+    font-weight: 500;
+}
 .logo{
     width: 35px;
     border-radius: 100px;
 }
-.nav-link{
+.dropdown_item{
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+}
+.dropdown_item:hover{
+    color: #9c6cf0;
+}
+.nav_link{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+.nav_link:hover{
+    color: #9c6cf0;
+}
+/*btn volver*/
+.c_volver{
+    margin: 15px;
+}
+.btn_volver{
     margin: 10px;
+    padding: 3px 45px;
+    background-color: #9c6cf0;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 35px;
 }
-.nav-link:hover{
-    color: blue;
-    text-decoration: underline;
-}
-/*"Body"*/
+/*"""Body"""*/
 .container{
     display: flex;
     flex-direction: column;
+    background:white;
+    border-radius: 30px;
 }
 /*Imganes y contenedores*/
 .img-c{
@@ -39,10 +78,13 @@
 }
 .producto-txt{
     text-align: center;
-    padding-bottom: 5px;    
+    padding-bottom: 5px;
+    font-size: 35px;
+    font-weight: 500;   
 }
 .detalle-txt{
     text-align: justify;
+    margin: 15px;
 }
 .precio{
     padding-left: 10px;
@@ -58,7 +100,7 @@
     size: 200px;
     margin: 10px;
     text-align: center;
-    background-color: blue;
+    background-color: #9c6cf0;
     color: white;
     text-decoration: none;
     border-radius: 35px;
