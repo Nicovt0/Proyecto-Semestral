@@ -33,6 +33,14 @@
 .nav_link:hover{
     color: #9c6cf0;
 }
+.buton{
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+}
+.buton:hover{
+    color: #9c6cf0;
+}
 /*btn volver*/
 .c_volver{
     margin: 15px;
