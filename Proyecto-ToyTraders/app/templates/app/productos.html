@@ -1,0 +1,103 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+<!-- CSS -->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/CSS/productos.css' %}">
+{% endblock %}
+
+<!--contenido-->
+{% block contenido %}
+    <!--Productos-->
+    <p id="#Anime" class="titulos-txt">Anime</p>
+    <div class="cards">
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/A1.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Zenitsu</h5>
+                <p class="card-text">Figura del cazador de demonios con la respiracion del rayo.</p>
+                <div class="precio">$20.000</div><br>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href="{% url 'producto' %}"><img src="{% static 'app/Img/productos/A2.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Luffy gear five</h5>
+                <p class="card-text">Figura del personaje de one piece Monkey D Luffy.</p>
+                <div class="precio">$75.000</div>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/A3.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Sukuna</h5>
+                <p class="card-text">Figura del rey de las maldiciones.</p>
+                <div class="precio">$45.000</div>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+    </div>
+    <p id="#HyV" class="titulos-txt">Heroes y Villanos</p>
+    <div class="cards">
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/H1.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Venom</h5>
+                <p class="card-text">Figura del Simbionte extraterrestre con fuerza sobrehumana.</p>
+                <div class="precio">$40.000</div><br>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/H2.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Black panther</h5>
+                <p class="card-text">Figura del superheroe Rey de Wakanda con habilidades sobrehumanas.</p>
+                <div class="precio">$20.000</div>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/H3.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Superman</h5>
+                <p class="card-text">Figura del Heroe Icono de DC Comics con poderes kryptonianos.</p>
+                <div class="precio">$25.990</div>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+    </div>
+    <p id="Videojuegos" class="titulos-txt">Videojuegos</p>
+    <div class="cards">
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/V1.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Yasuo</h5>
+                <p class="card-text">Figura del campeon de LoL Yasuo.</p>
+                <div class="precio">$100</div><br>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/V2.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Thresh</h5>
+                <p class="card-text">Figura del campeon de LoL Thresh.</p>
+                <div class="precio">$175</div>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+        <div class="card shadow rounded-4" style="width: 17rem;">
+            <a href=""><img src="{% static 'app/Img/productos/V3.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">Lux</h5>
+                <p class="card-text">Figura del campeon de LoL Lux.</p>
+                <div class="precio">$23</div>
+                <div class="btnagregar"><button class="agregar">Agregar</button></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

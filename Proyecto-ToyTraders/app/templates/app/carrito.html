@@ -1,0 +1,92 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+<!-- CSS -->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/CSS/carrito.css' %}">
+
+{% endblock %}
+
+<!--contenido-->
+{% block contenido %}
+    <!----Carrito de compras---->
+    <div class="contener-chico cart-page">
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="carrito-info">
+                        <img src="{% static 'app/Img/productos/A1.png' %}" alt="Zenitsu">
+                        <div>
+                            <p>Figura 1</p>
+                            <small>precio: 50</small>
+                            <br>
+                            <a href="">Remover</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="numero" value="1"></td>
+                <td>$50</td>
+    
+    
+            </tr>
+            <tr>
+                <td>
+                    <div class="carrito-info">
+                        <img src="{% static 'app/Img/productos/A3.png' %}" alt="Zukuna">
+                        <div>
+                            <p>Figura 2</p>
+                            <small>precio: 75</small>
+                            <br>
+                            <a href="">Remover</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="numero" value="1"></td>
+                <td>$75</td>
+    
+    
+            </tr>
+            <tr>
+                <td>
+                    <div class="carrito-info">
+                        <a href="#"><img src="{% static 'app/Img\productos\A2.png' %}" alt="Luffy"></a>
+                        <div>
+                            <p>Figura 3</p>
+                            <small>precio: 10000</small>
+                            <br>
+                            <a href="">Remover</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="numero" value="1"></td>
+                <td>$10000</td>
+    
+    
+            </tr>
+        </table>
+    
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>total</td>
+                    <td>$10.125</td>
+                </tr>
+                <tr>
+                    <td>impuesto</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>total</td>
+                    <td>$10.155</td>
+                </tr>
+            </table>
+        </div>
+        <div class="btn_c"><a href="" class="btn_pagar">Ir a pagar</a></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+<!-- CSS -->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/CSS/producto.css' %}">
+{% endblock %}
+
+<!-- JS -->
+{% block js %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'app/JS/Api.js' %}"></script>
+    <script src="{% static 'app/JS/img.js' %}"></script>
+{% endblock %}
+
+<!--contenido-->
+{% block contenido %}
+    <!--Detalle del producto-->
+    <div class="c_volver">
+        <a href="{% url 'productos' %}" class="btn_volver">Volver</a>
+    </div>
+    <div class="container">
+        <div class="img-c">
+            <img id="img-principal" class="img-principal" src="{% static 'app/Img/productos/ProductoA2/1.png' %}" alt="">
+            <div class="sub-img-c">
+                <img class="sub-img" src="{% static 'app/Img/productos/ProductoA2/2.png' %}" alt="" onmouseover="changeImage(this)">
+                <img class="sub-img" src="{% static 'app/Img/productos/ProductoA2/3.png' %}" alt="" onmouseover="changeImage(this)">
+                <img class="sub-img" src="{% static 'app/Img/productos/ProductoA2/4.png' %}" alt="" onmouseover="changeImage(this)">
+                <img class="sub-img" src="{% static 'app/Img/productos/ProductoA2/5.png' %}" alt="" onmouseover="changeImage(this)">
+            </div>
+        </div>
+        <div class="informacion-p">
+            <h1 class="producto-txt">Luffy Gear Five</h1>
+            <p class="detalle-txt">¡Prepárate para la aventura más épica con esta impresionante figura de Luffy en su Gear Five, basada en el popular anime y manga "One Piece"! Esta figura captura la esencia vibrante y la energía ilimitada de Monkey D. Luffy en uno de sus estados más poderosos y emocionantes.</p>
+            <h4 class="precio">$75.000</h4>
+            <div class="btn-compra">
+                <a class="btn-pr btn-primary" href="#" role="button">Agregar al carrito</a>
+                <a class="btn-pr btn-primary" href="#" role="button">Comprar</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="informacion-p">
+            <h1 class="producto-txt">Si quieres ver la sinopsis del anime</h1>
+            <button type="button" class="btn-pr btn-primary" id="enviar">Haz click aquí</button>
+            <table class="table table-bordered" id="animeTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Sinopsis</th>
+                    </tr>
+                </thead>                
+            </table>
+        </div>
+    </div>
+{% endblock %}

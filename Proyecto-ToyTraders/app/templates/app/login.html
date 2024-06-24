@@ -1,0 +1,66 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+<!-- CSS -->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/CSS/login.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+{% endblock %}
+
+<!-- JS -->
+{% block js %}
+    <script src="{% static 'app/JS/login.js' %}"></script>
+{% endblock %}
+
+<!--contenido-->
+{% block contenido %}
+    <div class="todo">
+        <div class="wrapper">
+            <div class="form-wrapper sign-in">
+                <form action="">
+                    <h2 class="th2">Login</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button class="button" type="submit">Login</button>
+                    <div class="signUp-link">
+                        <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-wrapper sign-up">
+                <form action="">
+                    <h2 class="th2">Sign Up</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox"> I agree to the terms & conditions</label>
+                    </div>
+                    <button class="button" type="submit">Sign Up</button>
+                    <div class="signUp-link">
+                        <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
