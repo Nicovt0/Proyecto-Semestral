@@ -14,7 +14,7 @@ class Producto(models.Model):
     nombre= models.CharField(max_length=20)
     descripcion= models.TextField(max_length=500)
     precio= models.IntegerField()
-    foto= models.ImageField(upload_to="ToyTraders", null=True)
+    foto= models.ImageField(upload_to="productos", null=True)
     id_genero= models.ForeignKey('Genero',on_delete=models.PROTECT, db_column='idGenero')
 
     def __str__(self):
