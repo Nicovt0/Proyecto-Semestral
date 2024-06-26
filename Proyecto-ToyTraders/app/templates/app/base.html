@@ -8,6 +8,7 @@
     {% load static %}
 
     <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'app/CSS/base.css' %}">
     {% block css %}
     {% endblock %}
 
@@ -41,13 +42,28 @@
                 </div>
                 <a class="nav_link" href="{% url 'login' %}">Login</a><br>
                 <a class="nav_link" href="{% url 'carrito' %}" role="button">Carrito</a>
+                <a href="{% url 'agregar_producto' %}">Agregar producto</a>
+                <a href="{% url 'listar_productos' %}">Listar</a>
             </div>
         </div>
     </nav>
-    
 
-    {% block contenido %}
-    {% endblock %}
+        {% block contenido %}
+        {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+        {% for m in messages %}
+            <script>
+                Swal.fire({
+                    icon: "success",
+                    title: "Felicitaciones",
+                    text: "{{ m }}"
+                });
+            </script>
+        {% endfor %}
+    {% endif %}
 
     {% block js %}
     {% endblock %}

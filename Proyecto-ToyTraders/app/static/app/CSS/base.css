@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fondo{
+    background-color:#3b3050;
+    overflow: auto;
+}
+/*Encabezado*/
+.navbar-name{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 30px;
+    font-weight: 500;
+}
+.logo{
+    width: 35px;
+    border-radius: 100px;
+}
+.dropdown_item{
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+}
+.dropdown_item:hover{
+    color: #9c6cf0;
+}
+.nav_link{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+.nav_link:hover{
+    color: #9c6cf0;
+}
+.buton{
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+}
+.buton:hover{
+    color: #9c6cf0;
+}
