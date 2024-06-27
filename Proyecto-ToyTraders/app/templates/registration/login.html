@@ -1,0 +1,74 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+<!-- CSS -->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/CSS/login.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+{% endblock %}
+
+<!-- JS -->
+{% block js %}
+    <script src="{% static 'app/JS/login.js' %}"></script>
+{% endblock %}
+
+<!--contenido-->
+{% block contenido %}
+<div class="todo">
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h2 class="th2">Login</h2>
+                <div class="input-group">
+                    {{ form.username }}
+                    <label for="{{ form.username.id_for_label }}">Username</label>
+                </div>
+                <div class="input-group">
+                    {{ form.password }}
+                    <label for="{{ form.password.id_for_label }}">Password</label>
+                </div>
+                <div class="remember">
+                    <label>
+                        {{ form.remember_me }}
+                        Remember me
+                    </label>
+                </div>
+                <button class="button" type="submit">Login</button>
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-wrapper sign-up">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h2 class="th2">Sign Up</h2>
+                <div class="input-group">
+                    {{ form.username }}
+                    <label for="{{ form.username.id_for_label }}">Username</label>
+                </div>
+                <div class="input-group">
+                    {{ form.email }}
+                    <label for="{{ form.email.id_for_label }}">Email</label>
+                </div>
+                <div class="input-group">
+                    {{ form.password }}
+                    <label for="{{ form.password.id_for_label }}">Password</label>
+                </div>
+                <div class="remember">
+                    <label>
+                        {{ form.terms_conditions }}
+                        I agree to the terms & conditions
+                    </label>
+                </div>
+                <button class="button" type="submit">Sign Up</button>
+                <div class="signUp-link">
+                    <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -40,10 +40,22 @@
                         <li><a class="dropdown_item" href="{% url 'productos' %}">Videojuegos</a></li>
                     </ul>
                 </div>
-                <a class="nav_link" href="{% url 'login' %}">Login</a><br>
+
+                {% if user.is_authenticated %}
+                <div class="dropdown">
+                    <a class="nav_link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">@{{ user.username}}</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown_item" href="{% url 'agregar_producto' %}">Agregar Producto</a></li>
+                        <li><a class="dropdown_item" href="{% url 'listar_productos' %}">Listar Productos</a></li>
+                        <li><a class="dropdown_item" href="{% url 'logout' %}">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+                {% else %}
+                    <a class="nav_link" href="{% url 'login' %}">Login</a>
+                {% endif %}
+                
                 <a class="nav_link" href="{% url 'carrito' %}" role="button">Carrito</a>
-                <a href="{% url 'agregar_producto' %}">Agregar producto</a>
-                <a href="{% url 'listar_productos' %}">Listar</a>
+
             </div>
         </div>
     </nav>
