@@ -16,13 +16,14 @@
 
 <!--contenido-->
 {% block contenido %}
+{% load humanize %}
     <!--Detalle del producto-->
     <div class="c_volver">
         <a href="{% url 'productos' %}" class="btn_volver">Volver</a>
     </div>
     <div class="container">
         <div class="img-c">
-            <img id="img-principal" class="img-principal" src="{% static 'app/Img/productos/ProductoA2/1.png' %}" alt="">
+            <img id="img-principal" class="img-principal" src="{{ producto.foto.url }}" alt="">
             <div class="sub-img-c">
                 <img class="sub-img" src="{% static 'app/Img/productos/ProductoA2/2.png' %}" alt="" onmouseover="changeImage(this)">
                 <img class="sub-img" src="{% static 'app/Img/productos/ProductoA2/3.png' %}" alt="" onmouseover="changeImage(this)">
@@ -31,9 +32,9 @@
             </div>
         </div>
         <div class="informacion-p">
-            <h1 class="producto-txt">Luffy Gear Five</h1>
-            <p class="detalle-txt">¡Prepárate para la aventura más épica con esta impresionante figura de Luffy en su Gear Five, basada en el popular anime y manga "One Piece"! Esta figura captura la esencia vibrante y la energía ilimitada de Monkey D. Luffy en uno de sus estados más poderosos y emocionantes.</p>
-            <h4 class="precio">$75.000</h4>
+            <h1 class="producto-txt">{{ producto.nombre }}</h1>
+            <p class="detalle-txt">{{ producto.descripcion }}</p>
+            <h4 class="precio">${{ producto.precio | intcomma }}</h4>
             <div class="btn-compra">
                 <a class="btn-pr btn-primary" href="#" role="button">Agregar al carrito</a>
                 <a class="btn-pr btn-primary" href="#" role="button">Comprar</a>

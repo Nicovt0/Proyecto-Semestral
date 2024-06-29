@@ -1,0 +1,26 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+<!-- CSS -->
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/CSS/login.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+{% endblock %}
+
+<!-- JS -->
+{% block js %}
+    <script src="{% static 'app/JS/login.js' %}"></script>
+{% endblock %}
+
+<!--contenido-->
+{% block contenido %}
+    <div class="form-wrapper sign-up">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+
+            <input type="submit" value="registrar" class="btn btn-success float-rigut">    
+        </form>
+    </div>
+{% endblock %}

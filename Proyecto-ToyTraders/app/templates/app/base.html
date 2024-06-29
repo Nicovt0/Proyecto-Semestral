@@ -32,21 +32,19 @@
                         <button class="btn btn-outline-success" type="submit">Lupa</button>
                     </form>
                 </ul>
-                <div class="dropdown">
-                    <a class="nav_link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown_item" href="{% url 'productos' %}">Anime</a></li>
-                        <li><a class="dropdown_item" href="{% url 'productos' %}">Heroes y Villanos</a></li>
-                        <li><a class="dropdown_item" href="{% url 'productos' %}">Videojuegos</a></li>
-                    </ul>
-                </div>
+
+                <a class="nav_link" href="{% url 'productos' %}" role="button">Productos</a>
 
                 {% if user.is_authenticated %}
                 <div class="dropdown">
                     <a class="nav_link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">@{{ user.username}}</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown_item" href="{% url 'agregar_producto' %}">Agregar Producto</a></li>
+                        {% if perms.app.add_producto %}
+                            <li><a class="dropdown_item" href="{% url 'agregar_producto' %}">Agregar Producto</a></li>
+                        {% endif %}
+                        {% if perms.app.view_producto %}
                         <li><a class="dropdown_item" href="{% url 'listar_productos' %}">Listar Productos</a></li>
+                        {% endif %}
                         <li><a class="dropdown_item" href="{% url 'logout' %}">Cerrar Sesion</a></li>
                     </ul>
                 </div>
@@ -59,6 +57,7 @@
             </div>
         </div>
     </nav>
+
 
         {% block contenido %}
         {% endblock %}

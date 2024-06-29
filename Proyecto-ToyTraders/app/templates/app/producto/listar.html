@@ -24,7 +24,7 @@
 {% block contenido %}
 {% load humanize %}
 
-<br><br><br>
+<br><br>
 <div class="row">
     <div class="col-12 col-md-6 mx-auto">
         <div class="card">
@@ -48,8 +48,13 @@
                             <td>${{ p.precio | intcomma }}</td>
                             <td>{{ p.id_genero }}</td>
                             <td>
-                                <a href="{% url 'modificar_producto' p.id %}" class="btn btn-info btn-sm">Modificar</a>
-                                <a href="#" onclick="eliminarProducto({{ p.id }})" class="btn btn-danger btn-sm">Eliminar</a>
+                                {% if perms.app.change_producto%}
+                                    <a href="{% url 'modificar_producto' p.id %}" class="btn btn-info btn-sm">Modificar</a>
+                                {% endif %}
+
+                                {% if perms.app.delete_producto%}
+                                    <a href="#" onclick="eliminarProducto({{ p.id }})" class="btn btn-danger btn-sm">Eliminar</>
+                                {% endif %}
                             </td>
                         </tr>
                     {% endfor %}
@@ -62,4 +67,5 @@
         </div>
     </div>
 </div>
+<br><br>
 {% endblock %}

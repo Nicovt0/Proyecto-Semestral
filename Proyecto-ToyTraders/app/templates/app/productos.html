@@ -15,14 +15,14 @@
     <div class="cards">
         {% for p in productos %}
         <div class="card shadow rounded-4" style="width: 17rem;">
-            <a href="">
+            <a href="{% url 'producto' p.id %}">
                 {% if p.foto %}
                 <img src="{{ p.foto.url }}" class="card-img-top rounded-4 border-bottom border-black" alt="...">
                 {% endif %}
             </a>
             <div class="card-body">
                 <h5 class="card-title">{{ p.nombre | title }}</h5>
-                <p class="card-text">{{ p.descripcion | capfirst }}</p>
+                <p class="card-text">{{ p.id_genero | capfirst }}</p>
                 <div class="precio">${{ p.precio | intcomma }}</div><br>
                 <div class="btnagregar"><button class="agregar">Agregar</button></div>
             </div>

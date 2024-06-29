@@ -1,5 +1,7 @@
 from django import forms
 from .models import Producto
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class ProductoForm(forms.ModelForm):
     class Meta:
@@ -16,3 +18,8 @@ class SignUpForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'input', 'placeholder': 'Email'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'input', 'placeholder': 'Password'}))
     terms_conditions = forms.BooleanField(required=False, widget=forms.CheckboxInput(attrs={'class': 'check-input'}))
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
