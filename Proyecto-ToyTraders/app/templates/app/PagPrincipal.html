@@ -4,63 +4,68 @@
 
 <!-- CSS -->
 {% block css %}
-    <link rel="stylesheet" href="{% static 'app/CSS/pagprincipal.css' %}">
+<link rel="stylesheet" href="{% static 'app/CSS/pagprincipal.css' %}">
 {% endblock %}
 
 <!--contenido-->
 {% block contenido %}
-    <!--Carousel-->
-    <div class="carousel-c">
-        <div id="carouselExampleIndicators" class="carousel slide w-100 position-absolute start-50 translate-middle-x">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="{% url 'productos' %}"><img src="{% static 'app/Img/1.png' %}" class="d-block w-100" alt="..."></a>
-                </div>
-                <div class="carousel-item">
-                    <a href="{% url 'productos' %}"><img src="{% static 'app/Img/2.png' %}" class="d-block w-100" alt="..."></a>
-                </div>
-                <div class="carousel-item">
-                    <a href="{% url 'productos' %}"><img src="{% static 'app/Img/3.png' %}" class="d-block w-100" alt="..."></a>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+<!--Carousel-->
+<div class="carousel-c">
+    <div id="carouselExampleIndicators" class="carousel slide w-100 position-absolute start-50 translate-middle-x">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="{% url 'productos' %}"><img src="{% static 'app/Img/1.png' %}" class="d-block w-100"
+                        alt="..."></a>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'productos' %}"><img src="{% static 'app/Img/2.png' %}" class="d-block w-100"
+                        alt="..."></a>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'productos' %}"><img src="{% static 'app/Img/3.png' %}" class="d-block w-100"
+                        alt="..."></a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <!--Destacados-->
-    <p class="destacados-txt">Destacados</p>
-    <div class="cards">
-        <div class="card shadow rounded-4" style="width: 16rem;">
-            <a href="#"><img src="{% static 'app/Img/productos/A2.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
-            <div class="card-body">
-                <h5 class="card-title">Luffy gear five</h5>
-                <p class="card-text">Figura del personaje de one piece Monkey D Luffy. <br><br><br> $999.999.999</p>
-            </div>
-        </div>
-        <div class="card shadow rounded-4" style="width: 16rem;">
-            <a href="#"><img src="{% static 'app/Img/productos/H3.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
-            <div class="card-body">
-                <h5 class="card-title">Superman</h5>
-                <p class="card-text">Figura del superhe{% url 'productos' %}roe superman cuyo real nombre es martin. <br><br> $999.999.999</p>
-            </div>
-        </div>
-        <div class="card shadow rounded-4" style="width: 16rem;">
-            <a href="#"><img src="{% static 'app/Img/productos/V2.png' %}" class="card-img-top rounded-4 border-bottom border-black" alt="..."></a>
-            <div class="card-body">
-                <h5 class="card-title">Thresh</h5>
-                <p class="card-text">Figura del campeon de LoL Thresh. <br><br><br> $999.999.999</p>
-            </div>
-        </div>
-    </div>
+</div>
+<!--Destacados-->
+<p class="destacados-txt">Sobre Nosotros</p>
+<div class="cards">
+    <br><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequuntur tempora, quos commodi numquam
+        repudiandae excepturi atque assumenda rerum ex pariatur nam placeat recusandae nostrum maiores sed! Sapiente,
+        inventore iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quo ipsum officiis aspernatur
+        quas deleniti numquam, aliquam, distinctio sint assumenda sequi voluptate! Unde, ad similique. Accusantium
+        tenetur voluptatibus molestiae ducimus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed dolores
+        dolorum, accusantium ipsam, possimus laudantium quos deleniti vel obcaecati facilis, animi quas. Nemo deleniti
+        sunt, quis sed eveniet rerum consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        eaque qui illo nemo? Iste at iure libero fugit nobis. Ratione totam impedit obcaecati iusto deserunt! Sint
+        minima eveniet molestiae Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi ipsam minus omnis
+        suscipit facere, animi adipisci atque, enim ipsum architecto similique veritatis eius porro labore magni nostrum
+        ex iste quis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam voluptate fuga porro blanditiis
+        distinctio nihil cum, aperiam impedit illum eaque quae ut explicabo iusto aspernatur. Quam dicta laboriosam
+        vitae iure?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quasi adipisci rerum, a odio eos
+        animi quaerat veritatis voluptate eum ducimus aliquam libero inventore aspernatur cum, corrupti nemo quibusdam.
+        Vel!
+    </p>
+    <br><br>
+</div>
 {% endblock %}
